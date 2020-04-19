@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<div class='main-wrapper'>
+  <div class='title-wrapper'>
+    <p>Add ToDo:</p>
+  </div>
+  <div class='form-wrapper'>
+    <form method='POST' action='/add_todo/'>
+      {% csrf_token %}
+      <input type='text' placeholder='Add here...' name='todo' class='input-field' />
+      <input type='submit' value='+ Add' class='btn'/>
+    </form>
+  </div>
+</div>
+
+<div class='list-wrapper'>
+
+    {% for todo_item in todo_items%}
+      <div class='todo-item'>
+        <p>{{todo_item.text}}</p>
+        <form action="/delete_todo/{{todo_item.id}}/" method='POST'>
+          {% csrf_token %}
+          <input type="submit" value='Delete' class='btn btn-delete'/>
+        </form>
+      </div>
+    {% endfor %}
+
+  
+</div>
+{% endblock main_content %}

@@ -1,0 +1,89 @@
+body {
+  background-color: rgb(187, 187, 255);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* for navbar */
+
+.navbar {
+  background-color: rgb(31, 30, 30);
+  color: #f7f7f7;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 2.5rem;
+}
+
+/* content from here  */
+
+.container {
+  max-width: 1024px;
+  margin: 0px auto;
+}
+.main-wrapper {
+  padding-top: 3rem;
+  font-weight: 200;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+.form-wrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.btn {
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: rgb(247, 49, 49);
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+.input-field {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: solid rgb(167, 166, 166) 2px;
+  border-radius: 5px;
+  width: 40%;
+}
+@media screen and (max-width: 800px) {
+  .input-field {
+    width: auto;
+  }
+}
+.list-wrapper {
+  padding-left: 1rem;
+}
+.list-wrapper :first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.list-wrapper :last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin-right: 3rem;
+  align-items: center;
+  border: 2px solid #999;
+  padding: 1rem 2rem;
+  /* border-radius: 10px; */
+  background-color: #f7f7f7;
+}
+.todo-item p {
+  font-size: 1.5rem;
+}
+
+.btn.btn-delete {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
